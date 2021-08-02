@@ -23,5 +23,12 @@ class ProductPage(BasePage):
 		goods_price_text = goods_price.text
 		assert price_text  == goods_price_text, f'Wrong price in the success message, "{price_text }" instead of "{goods_price_text}"'
 
+	def should_not_be_success_message(self):
+		assert self.is_not_element_present(*ProductPageLocators.SUCCES_MESSAGE), "Success message is presented, but should not be"
+
+	def message_should_disappear(self):
+		assert self.is_disappeared(*ProductPageLocators.SUCCES_MESSAGE), "Success message is presented, but should disappear"
+
+
 
 
