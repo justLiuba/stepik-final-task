@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 from locators import ProductPageLocators
 
 
+
 class ProductPage(BasePage):
 	def add_to_basket(self):
 		button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
 		button.click()
 			
-
 	def should_be_right_goods_name_in_the_success_message(self):
 		goods_message = self.browser.find_element(*ProductPageLocators.GOODS_NAME_IN_MESSAGE)
 		success_text = goods_message.text
@@ -28,6 +28,8 @@ class ProductPage(BasePage):
 
 	def message_should_disappear(self):
 		assert self.is_disappeared(*ProductPageLocators.SUCCES_MESSAGE), "Success message is presented, but should disappear"
+
+	
 
 
 

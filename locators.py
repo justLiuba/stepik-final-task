@@ -15,6 +15,11 @@ class ProductPageLocators():
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET = (By.CSS_SELECTOR, '.btn-group .btn-default:nth-child(1)')
 
-
+# class MainPageLocators(): 
+	
+class BasketPageLocators():
+	ITEMS_TO_BYE = (By.CSS_SELECTOR, 'h2.col-sm-6')
+	EMPTY_BASKET_MESSSAGE = (By.XPATH, '//p[contains(text(), "Your basket is empty.")]')
 
