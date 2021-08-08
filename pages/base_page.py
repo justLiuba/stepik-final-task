@@ -4,15 +4,13 @@ from selenium.webdriver.support import expected_conditions as EC
 import math
 from selenium.common.exceptions import NoAlertPresentException 
 from selenium.common.exceptions import TimeoutException 
-from locators import BasePageLocators
+from pages.locators import BasePageLocators
 import time
-
 
 class BasePage():
 	def __init__(self, browser, url, timeout=10):
 		self.browser = browser
 		self.url = url
-		# self.browser.implicitly_wait(timeout)
 
 	def is_element_present(self, how, what):
 		try:

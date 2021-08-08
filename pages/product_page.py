@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-from locators import ProductPageLocators
+from pages.locators import ProductPageLocators
 
 class ProductPage(BasePage):
 	def add_to_basket(self):
